@@ -1,3 +1,23 @@
+def conversor_pesos_a_dolar(tipo_pesos, valor_dolar):
+    pesos = int(input("""Por favor la cantidad sin puntos ni comas
+
+    Cuantos pesos """ + tipo_pesos+ """ colombianos tienes?: """))
+    dolares = pesos / valor_dolar
+    pesos = str(pesos)
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print("Tienes $" + pesos + " pesos Colombianos, que equivalen a $" + dolares + " dolares")
+
+def conversor_dolar_a_pesos(costo_pesos, tipos_pesos):
+    dolar = float(input("Cuantos Dolares tienes?: "))
+    valor_pesos = dolar * costo_pesos
+    dolar = str(dolar)
+    valor_pesos = round(valor_pesos,2)
+    valor_pesos = str(valor_pesos)
+    print("Tienes $" + dolar + " dolares, que equivalen a " + valor_pesos + tipos_pesos)
+
+
+
 menu = """
 Bienvenid@  a nuestro sistema de conversion de monedas activo ⚡
 Que proceso desea realizar hoy?
@@ -12,58 +32,16 @@ Que proceso desea realizar hoy?
 Elige una opcion:  """
 opcion = input(menu)
 if opcion == "1":
-    pesos = int(input("""Por favor la cantidad sin puntos ni comas
-
-    Cuantos pesos colombianos tienes?: """))
-    valor_dolar = 4393
-    dolares = pesos / valor_dolar
-    pesos = str(pesos)
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes $" + pesos + " pesos Colombianos, que equivalen a $" + dolares + " dolares")
+    conversor_pesos_a_dolar("Colombianos", 4417)
 elif opcion == "2":
-    pesos = int(input("""Por favor la cantidad sin puntos ni comas
-
-    Cuantos pesos colombianos tienes?: """))
-    valor_dolar = 137
-    dolares = pesos / valor_dolar
-    pesos = str(pesos)
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes $" + pesos + " pesos Argentinos, que equivalen a $" + dolares + " dolares")
+    conversor_pesos_a_dolar("Argentinos", 137)
 elif opcion == "3":
-    pesos = int(input("""Por favor la cantidad sin puntos ni comas
-    
-    Cuantos pesos colombianos tienes?: """))
-    valor_dolar = 20
-    dolares = pesos / valor_dolar
-    pesos = str(pesos)
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print("Tienes $" + pesos + " pesos Mexicanos, que equivalen a $" + dolares + " dolares")
+    conversor_pesos_a_dolar("Mexicanos", 20)
 elif opcion == "4":
-    dolar = float(input("Cuantos Dolares tienes?: "))
-    valor_pesos_colombiano = 4393.93
-    pesos_colombianos = dolar * valor_pesos_colombiano
-    dolar = str(dolar)
-    pesos_colombianos = round(pesos_colombianos,2)
-    pesos_colombianos = str(pesos_colombianos)
-    print("Tienes $" + dolar + " dolares, que equivalen a " + pesos_colombianos + " Pesos Colombianos")
+    conversor_dolar_a_pesos(4417," pesos Colombianos")
 elif opcion == "5":
-    dolar = float(input("Cuantos Dolares tienes?: "))
-    valor_pesos_argentinos = 137.87
-    pesos_argentinos = dolar * valor_pesos_argentinos
-    dolar = str(dolar)
-    pesos_argentinos = round(pesos_argentinos,2)
-    pesos_argentinos = str(pesos_argentinos)
-    print("Tienes $" + dolar + " dolares, que equivalen a " + pesos_argentinos + " Pesos Argentinos")
+    conversor_dolar_a_pesos(137," pesos Argentinos")
 elif opcion == "6":
-    dolar = float(input("Cuantos Dolares tienes?: "))
-    valor_pesos_mexicanos = 20
-    pesos_mexicanos = dolar * valor_pesos_mexicanos
-    dolar = str(dolar)
-    pesos_mexicanos = round(pesos_mexicanos,2)
-    pesos_mexicanos = str(pesos_mexicanos)
-    print("Tienes $" + dolar + " dolares, que equivalen a " + pesos_mexicanos + " Pesos Mexicanos")
+    conversor_dolar_a_pesos(20, " pesos Mexicanos")
 else:
     print("Selecciona una opcion valida, por favor")
