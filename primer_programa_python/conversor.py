@@ -17,7 +17,6 @@ def conversor_dolar_a_pesos(costo_pesos, tipos_pesos):
     print("Tienes $" + dolar + " dolares, que equivalen a " + valor_pesos + tipos_pesos)
 
 
-
 menu = """
 Bienvenid@  a nuestro sistema de conversion de monedas activo ⚡
 Que proceso desea realizar hoy?
